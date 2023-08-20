@@ -58,6 +58,11 @@ public class ElementActions extends Base {
         Select dropdown = new Select(findAndWaitForTheElement(locator));
         dropdown.selectByVisibleText(text);
     }
+    public static void selectFromDropDownByValue(By locator, String text)
+    {
+        Select dropdown = new Select(findAndWaitForTheElement(locator));
+        dropdown.selectByValue(text);
+    }
     public static String getText(By locator)
     {
         return findAndWaitForTheElement(locator).getText();
