@@ -13,6 +13,7 @@ import org.openqa.selenium.Keys;
 
 import javax.swing.*;
 import java.time.Duration;
+import java.util.Random;
 
 public class ElementActions extends Base {
     public static WebElement element = null;
@@ -66,6 +67,11 @@ public class ElementActions extends Base {
     public static String getText(By locator)
     {
         return findAndWaitForTheElement(locator).getText();
+    }
+    public static String generateEmailDynamically()
+    {
+        Random ra = new Random();
+        return ("jondoe"+ra.nextInt(500)+"@gmail.com");
     }
 //    public static boolean tabTitleCheck(String expectedTitle)
 //    {

@@ -3,6 +3,7 @@ import env.Base;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.PlaceOrderPage;
+import utilities.ElementActions;
 
 public class PlaceOrderTest extends Base{
     @Test(description = "Guest User Order Place")
@@ -30,7 +31,7 @@ public class PlaceOrderTest extends Base{
         Thread.sleep(1000);
         PlaceOrderPage.fillLastName("Doe");
         Thread.sleep(1000);
-        PlaceOrderPage.fillEmail("jondoe@abc.com");
+        PlaceOrderPage.fillEmail(ElementActions.generateEmailDynamically());
         Thread.sleep(1000);
         PlaceOrderPage.fillCompany("JD Enterprise");
         Thread.sleep(1000);

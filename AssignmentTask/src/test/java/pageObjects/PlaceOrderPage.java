@@ -141,7 +141,6 @@ public class PlaceOrderPage {
     public static void fillCardHolderName(String value)
     {
         ElementActions.sendText(cardHolderName, value);
-        //Jon Doe
     }
     public static void fillCardNumber(String value)
     {
@@ -171,8 +170,4 @@ public class PlaceOrderPage {
     {
         return ElementActions.getText(orderSuccessMessage);
     }
-
-
-
-
 }
